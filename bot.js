@@ -1,8 +1,9 @@
 const { Client } = require("discord.js");
 
+const token = require(".\token.js");
 const bot = new Client({ intents: ["Guilds"] });
 console.log("Connexion au bot...");
-bot.login("MTAwNDQ1MzM2MDgzOTE4NDUxNQ.GgtMS_.hDTuEhsSfkIwCrSNYLX8kiQ4ImHvCyy_2c9Uh8")
+bot.login(token)
     .then(() => console.log("Connecté au bot !"))
     .catch((error) => console.log("Impossible de se connecter au bot - " + error));
 
